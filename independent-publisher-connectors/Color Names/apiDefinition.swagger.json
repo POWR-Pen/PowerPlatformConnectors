@@ -1,0 +1,116 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Color Names",
+    "description": "Get Color Names from colornames.org",
+    "version": "1.0"
+  },
+  "host": "colornames.org",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/search/json/": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "hexCode": {
+                  "type": "string",
+                  "description": "hexCode"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Color Name",
+        "description": "Get the Color Name for a # color reference",
+        "operationId": "GetColorName",
+        "parameters": [
+          {
+            "name": "hex",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/fresh/json/": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "nameId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "nameId"
+                  },
+                  "hexCode": {
+                    "type": "string",
+                    "description": "hexCode"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "name"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Latest",
+        "description": "Gets the latest 100 submissions to colornames.org",
+        "operationId": "GetLatest",
+        "parameters": []
+      }
+    },
+    "/random/json/": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "hexCode": {
+                  "type": "string",
+                  "description": "hexCode"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Random Color",
+        "description": "Return a Random Color, HEX and Name",
+        "operationId": "GetRandomColor",
+        "parameters": []
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
