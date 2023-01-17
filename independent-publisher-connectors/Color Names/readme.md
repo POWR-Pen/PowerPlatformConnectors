@@ -1,5 +1,5 @@
 # Color Names
-Gets a Color Name using a HEX value, gets the latest 100 color name submissions or return a random color from colornames.org
+The Connector uses Colornames.org to retrieve color names for Color HEX codes. It allows users to easily search and find the names of specific colors, as well as access the latest 100 color name submissions made to the website. Additionally, the connector can be used to return a randomly selected color for creative inspiration.
 
 ## Publisher: Pen Warner
 
